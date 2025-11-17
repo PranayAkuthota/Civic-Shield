@@ -1,7 +1,7 @@
 import { Router, Response } from 'express';
 import { AuthenticatedRequest, ApiResponse } from '../types';
 import { authenticateToken } from '../middleware/auth';
-import { uploadSingle, uploadMultiple, handleUploadError, fileUploadService } from '../services/fileUpload';
+import { uploadSingle, uploadMultiple, handleUploadError, fileUploadService, getFileCategory } from '../services/fileUpload';
 import { Complaint } from '../models';
 import { logger } from '../utils/logger';
 import { uploadLimiter } from '../middleware/security';
