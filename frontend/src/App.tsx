@@ -43,7 +43,7 @@ function App() {
             } />
             <Route path="/file-complaint" element={
               <ProtectedRoute>
-                <ComplaintForm />
+                <SimpleComplaintForm />
               </ProtectedRoute>
             } />
             <Route path="*" element={<Navigate to="/dashboard" replace />} />
