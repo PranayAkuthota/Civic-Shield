@@ -1,14 +1,20 @@
 {
-  "name": "backend",
+  "name": "telangana-properties-protection-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend API for Telangana Assets and Properties Protection Site",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rimraf dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["telangana", "land", "protection", "complaints", "government", "encroachment"],
+  "author": "Telangana Properties Protection Team",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "@sendgrid/mail": "^8.1.6",
