@@ -18,7 +18,7 @@ import {
   Stepper,
   Step,
   StepLabel,
-  Grid,
+  Unstable_Grid2 as Grid,
   Card,
   CardContent,
   IconButton,
