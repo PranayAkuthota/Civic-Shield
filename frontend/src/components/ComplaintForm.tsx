@@ -445,56 +445,54 @@ const ComplaintForm: React.FC = () => {
 
       case 3:
         return (
-          <Grid container spacing={3}>
-            <Grid xs={12}>
-              <Paper variant="outlined" sx={{ p: 3 }}>
-                <Typography variant="h6" gutterBottom>
-                  Complaint Summary
-                </Typography>
-                <Grid container spacing={2}>
-                  <Grid xs={12} md={6}>
-                    <Typography variant="subtitle2">Title:</Typography>
-                    <Typography variant="body1">{formData.title}</Typography>
-                  </Grid>
-                  <Grid xs={12} md={6}>
-                    <Typography variant="subtitle2">Category:</Typography>
-                    <Typography variant="body1">
-                      {categories.find(c => c.value === formData.category)?.label}
+          <Box>
+            <Paper variant="outlined" sx={{ p: 3 }}>
+              <Typography variant="h6" gutterBottom>
+                Complaint Summary
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+                <Box sx={{ flex: '1 1 45%', minWidth: 250 }}>
+                  <Typography variant="subtitle2">Title:</Typography>
+                  <Typography variant="body1">{formData.title}</Typography>
+                </Box>
+                <Box sx={{ flex: '1 1 45%', minWidth: 250 }}>
+                  <Typography variant="subtitle2">Category:</Typography>
+                  <Typography variant="body1">
+                    {categories.find(c => c.value === formData.category)?.label}
+                  </Typography>
+                </Box>
+                <Box sx={{ flex: '1 1 100%' }}>
+                  <Typography variant="subtitle2">Description:</Typography>
+                  <Typography variant="body1">{formData.description}</Typography>
+                </Box>
+                <Box sx={{ flex: '1 1 45%', minWidth: 250 }}>
+                  <Typography variant="subtitle2">District:</Typography>
+                  <Typography variant="body1">{formData.location.district}</Typography>
+                </Box>
+                <Box sx={{ flex: '1 1 45%', minWidth: 250 }}>
+                  <Typography variant="subtitle2">Location:</Typography>
+                  <Typography variant="body1">
+                    {formData.location.village}, {formData.location.mandal}
+                  </Typography>
+                </Box>
+                <Box sx={{ flex: '1 1 100%' }}>
+                  <Typography variant="subtitle2">Address:</Typography>
+                  <Typography variant="body1">{formData.location.address}</Typography>
+                </Box>
+                <Box sx={{ flex: '1 1 100%' }}>
+                  <Typography variant="subtitle2">Evidence Files:</Typography>
+                  <Typography variant="body1">{formData.files.length} files uploaded</Typography>
+                </Box>
+                {formData.isAnonymous && (
+                  <Box sx={{ flex: '1 1 100%' }}>
+                    <Typography variant="subtitle2" color="primary">
+                      This complaint will be filed anonymously
                     </Typography>
-                  </Grid>
-                  <Grid xs={12}>
-                    <Typography variant="subtitle2">Description:</Typography>
-                    <Typography variant="body1">{formData.description}</Typography>
-                  </Grid>
-                  <Grid xs={12} md={6}>
-                    <Typography variant="subtitle2">District:</Typography>
-                    <Typography variant="body1">{formData.location.district}</Typography>
-                  </Grid>
-                  <Grid xs={12} md={6}>
-                    <Typography variant="subtitle2">Location:</Typography>
-                    <Typography variant="body1">
-                      {formData.location.village}, {formData.location.mandal}
-                    </Typography>
-                  </Grid>
-                  <Grid xs={12}>
-                    <Typography variant="subtitle2">Address:</Typography>
-                    <Typography variant="body1">{formData.location.address}</Typography>
-                  </Grid>
-                  <Grid xs={12}>
-                    <Typography variant="subtitle2">Evidence Files:</Typography>
-                    <Typography variant="body1">{formData.files.length} files uploaded</Typography>
-                  </Grid>
-                  {formData.isAnonymous && (
-                    <Grid xs={12}>
-                      <Typography variant="subtitle2" color="primary">
-                        This complaint will be filed anonymously
-                      </Typography>
-                    </Grid>
-                  )}
-                </Grid>
-              </Paper>
-            </Grid>
-          </Grid>
+                  </Box>
+                )}
+              </Box>
+            </Paper>
+          </Box>
         );
 
       default:
