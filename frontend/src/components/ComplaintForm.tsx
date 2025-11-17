@@ -23,7 +23,6 @@ import {
   IconButton,
   LinearProgress
 } from '@mui/material';
-import { Unstable_Grid2 as Grid } from '@mui/material/Unstable_Grid2';
 import {
   CloudUpload,
   Delete,
