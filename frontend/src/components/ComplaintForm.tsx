@@ -18,7 +18,7 @@ import {
   Stepper,
   Step,
   StepLabel,
-  Grid2 as Grid,
+  Grid,
   Card,
   CardContent,
   IconButton,
