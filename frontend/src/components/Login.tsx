@@ -75,7 +75,7 @@ const Login: React.FC = () => {
       setLoading(true);
       setError(null);
 
-      await login(citizenForm.aadhaarNumber, citizenForm.phone, 'citizen');
+      await login(citizenForm.aadhaarNumber, citizenForm.phone);
       navigate('/dashboard');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Login failed');
@@ -96,7 +96,7 @@ const Login: React.FC = () => {
       setLoading(true);
       setError(null);
 
-      await login(officialForm.email, officialForm.password, 'official');
+      await login(officialForm.email, officialForm.password);
       navigate('/dashboard');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Login failed');
