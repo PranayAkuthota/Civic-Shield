@@ -281,7 +281,7 @@ const ComplaintForm: React.FC = () => {
                 helperText="Provide detailed information about the encroachment (50-2000 characters)"
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid xs={12} md={6}>
               <FormControl fullWidth required>
                 <InputLabel>Category</InputLabel>
                 <Select
@@ -296,7 +296,7 @@ const ComplaintForm: React.FC = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid xs={12} md={6}>
               <FormControl fullWidth>
                 <InputLabel>Severity Level</InputLabel>
                 <Select
@@ -356,7 +356,7 @@ const ComplaintForm: React.FC = () => {
                 helperText="Enter the complete address of the encroached property"
               />
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid xs={12} md={6}>
               <FormControl fullWidth required>
                 <InputLabel>District</InputLabel>
                 <Select
@@ -371,7 +371,7 @@ const ComplaintForm: React.FC = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid xs={12} md={6}>
               <TextField
                 fullWidth
                 label="Mandal"
@@ -466,11 +466,11 @@ const ComplaintForm: React.FC = () => {
                   Complaint Summary
                 </Typography>
                 <Grid container spacing={2}>
-                  <Grid item xs={12} md={6}>
+                  <Grid xs={12} md={6}>
                     <Typography variant="subtitle2">Title:</Typography>
                     <Typography variant="body1">{formData.title}</Typography>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid xs={12} md={6}>
                     <Typography variant="subtitle2">Category:</Typography>
                     <Typography variant="body1">
                       {categories.find(c => c.value === formData.category)?.label}
@@ -480,11 +480,11 @@ const ComplaintForm: React.FC = () => {
                     <Typography variant="subtitle2">Description:</Typography>
                     <Typography variant="body1">{formData.description}</Typography>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid xs={12} md={6}>
                     <Typography variant="subtitle2">District:</Typography>
                     <Typography variant="body1">{formData.location.district}</Typography>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid xs={12} md={6}>
                     <Typography variant="subtitle2">Location:</Typography>
                     <Typography variant="body1">
                       {formData.location.village}, {formData.location.mandal}
