@@ -116,7 +116,7 @@ router.post('/complaint/:complaintId', authenticateToken, uploadLimiter, uploadM
     const evidenceFiles = results.map(file => ({
       filename: file.filename,
       originalName: file.originalName,
-      fileType: fileUploadService.getFileCategory?.(file.mimeType) || 'document',
+      fileType: getFileCategory(file.mimeType) || 'document',
       url: file.url,
       uploadedAt: new Date(),
       size: file.size,
