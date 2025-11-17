@@ -79,6 +79,8 @@ class Server {
         message: 'API Information',
         endpoints: {
           auth: '/api/auth',
+          complaints: '/api/complaints',
+          upload: '/api/upload',
           health: '/health',
           documentation: '/api/docs' // TODO: Add API documentation
         }
