@@ -111,7 +111,7 @@ class ApiService {
         return response;
       },
       async (error: AxiosError) => {
-        const originalRequest = error.config;
+        const originalRequest = error.config as RetryableAxiosRequestConfig;
 
         if (error.response?.status === 401 && originalRequest && !originalRequest._retry) {
           originalRequest._retry = true;
