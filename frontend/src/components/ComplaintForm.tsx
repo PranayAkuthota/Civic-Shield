@@ -384,36 +384,34 @@ const ComplaintForm: React.FC = () => {
 
       case 2:
         return (
-          <Grid container spacing={3}>
-            <Grid xs={12}>
-              <Card variant="outlined">
-                <CardContent>
-                  <Box mb={2}>
-                    <Button
-                      variant="contained"
-                      component="label"
-                      startIcon={<CloudUpload />}
-                      fullWidth
-                    >
-                      Upload Evidence Files
-                      <input
-                        type="file"
-                        hidden
-                        multiple
-                        accept="image/*,.pdf,.doc,.docx"
-                        onChange={handleFileUpload}
-                      />
-                    </Button>
-                  </Box>
-                  <Typography variant="caption" color="textSecondary">
-                    Upload images, documents, or other evidence files. Max size: 10MB per file.
-                    Supported formats: Images (JPG, PNG), Documents (PDF, DOC, DOCX)
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+          <Box>
+            <Card variant="outlined">
+              <CardContent>
+                <Box mb={2}>
+                  <Button
+                    variant="contained"
+                    component="label"
+                    startIcon={<CloudUpload />}
+                    fullWidth
+                  >
+                    Upload Evidence Files
+                    <input
+                      type="file"
+                      hidden
+                      multiple
+                      accept="image/*,.pdf,.doc,.docx"
+                      onChange={handleFileUpload}
+                    />
+                  </Button>
+                </Box>
+                <Typography variant="caption" color="textSecondary">
+                  Upload images, documents, or other evidence files. Max size: 10MB per file.
+                  Supported formats: Images (JPG, PNG), Documents (PDF, DOC, DOCX)
+                </Typography>
+              </CardContent>
+            </Card>
             {formData.files.length > 0 && (
-              <Grid xs={12}>
+              <Box sx={{ mt: 2 }}>
                 <Typography variant="h6" gutterBottom>
                   Uploaded Files ({formData.files.length})
                 </Typography>
@@ -440,9 +438,9 @@ const ComplaintForm: React.FC = () => {
                     </CardContent>
                   </Card>
                 ))}
-              </Grid>
+              </Box>
             )}
-          </Grid>
+          </Box>
         );
 
       case 3:
