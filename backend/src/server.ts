@@ -59,6 +59,8 @@ class Server {
 
     // API routes
     this.app.use('/api/auth', authRoutes);
+    this.app.use('/api/complaints', complaintRoutes);
+    this.app.use('/api/upload', uploadRoutes);
 
     // Root endpoint
     this.app.get('/', (req, res) => {
