@@ -3,6 +3,11 @@ import axios, { AxiosInstance, AxiosResponse, AxiosError, InternalAxiosRequestCo
 // API Configuration
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
+// Extended interface for axios request config with _retry property
+interface RetryableAxiosRequestConfig extends InternalAxiosRequestConfig {
+  _retry?: boolean;
+}
+
 export interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
