@@ -4,7 +4,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { AuthProvider } from './contexts/AuthContext';
 import Login from './components/Login';
-import ComplaintForm from './components/ComplaintForm';
+import SimpleComplaintForm from './components/SimpleComplaintForm';
 
 const theme = createTheme({
   palette: {
