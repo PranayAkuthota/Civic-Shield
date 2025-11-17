@@ -326,30 +326,29 @@ const ComplaintForm: React.FC = () => {
 
       case 1:
         return (
-          <Grid container spacing={3}>
-            <Grid xs={12}>
-              <Box mb={2}>
-                <Button
-                  variant="outlined"
-                  startIcon={<LocationOn />}
-                  onClick={getCurrentLocation}
-                  fullWidth
-                >
-                  Use My Current Location
-                </Button>
-              </Box>
-              <TextField
+          <Box>
+            <Box mb={2}>
+              <Button
+                variant="outlined"
+                startIcon={<LocationOn />}
+                onClick={getCurrentLocation}
                 fullWidth
-                label="Complete Address"
-                value={formData.location.address}
-                onChange={(e) => handleLocationChange('address', e.target.value)}
-                required
-                multiline
-                rows={3}
-                helperText="Enter the complete address of the encroached property"
-              />
-            </Grid>
-            <Grid xs={12} md={6}>
+              >
+                Use My Current Location
+              </Button>
+            </Box>
+            <TextField
+              fullWidth
+              label="Complete Address"
+              value={formData.location.address}
+              onChange={(e) => handleLocationChange('address', e.target.value)}
+              required
+              multiline
+              rows={3}
+              helperText="Enter the complete address of the encroached property"
+              sx={{ mb: 2 }}
+            />
+            <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
               <FormControl fullWidth required>
                 <InputLabel>District</InputLabel>
                 <Select
@@ -363,8 +362,6 @@ const ComplaintForm: React.FC = () => {
                   ))}
                 </Select>
               </FormControl>
-            </Grid>
-            <Grid xs={12} md={6}>
               <TextField
                 fullWidth
                 label="Mandal"
@@ -373,18 +370,16 @@ const ComplaintForm: React.FC = () => {
                 required
                 helperText="Enter the mandal name"
               />
-            </Grid>
-            <Grid xs={12}>
-              <TextField
-                fullWidth
-                label="Village/Area"
-                value={formData.location.village}
-                onChange={(e) => handleLocationChange('village', e.target.value)}
-                required
-                helperText="Enter the village name or area name"
-              />
-            </Grid>
-          </Grid>
+            </Box>
+            <TextField
+              fullWidth
+              label="Village/Area"
+              value={formData.location.village}
+              onChange={(e) => handleLocationChange('village', e.target.value)}
+              required
+              helperText="Enter the village name or area name"
+            />
+          </Box>
         );
 
       case 2:
