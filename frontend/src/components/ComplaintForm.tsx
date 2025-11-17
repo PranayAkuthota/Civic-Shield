@@ -257,7 +257,7 @@ const ComplaintForm: React.FC = () => {
       case 0:
         return (
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid xs={12}>
               <TextField
                 fullWidth
                 label="Complaint Title"
@@ -269,7 +269,7 @@ const ComplaintForm: React.FC = () => {
                 helperText="Brief title describing the issue (10-200 characters)"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid xs={12}>
               <TextField
                 fullWidth
                 label="Detailed Description"
@@ -313,7 +313,7 @@ const ComplaintForm: React.FC = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12}>
+            <Grid xs={12}>
               <FormControlLabel
                 control={
                   <Switch
@@ -334,7 +334,7 @@ const ComplaintForm: React.FC = () => {
       case 1:
         return (
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid xs={12}>
               <Box mb={2}>
                 <Button
                   variant="outlined"
@@ -381,7 +381,7 @@ const ComplaintForm: React.FC = () => {
                 helperText="Enter the mandal name"
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid xs={12}>
               <TextField
                 fullWidth
                 label="Village/Area"
@@ -397,7 +397,7 @@ const ComplaintForm: React.FC = () => {
       case 2:
         return (
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid xs={12}>
               <Card variant="outlined">
                 <CardContent>
                   <Box mb={2}>
@@ -425,7 +425,7 @@ const ComplaintForm: React.FC = () => {
               </Card>
             </Grid>
             {formData.files.length > 0 && (
-              <Grid item xs={12}>
+              <Grid xs={12}>
                 <Typography variant="h6" gutterBottom>
                   Uploaded Files ({formData.files.length})
                 </Typography>
@@ -460,7 +460,7 @@ const ComplaintForm: React.FC = () => {
       case 3:
         return (
           <Grid container spacing={3}>
-            <Grid item xs={12}>
+            <Grid xs={12}>
               <Paper variant="outlined" sx={{ p: 3 }}>
                 <Typography variant="h6" gutterBottom>
                   Complaint Summary
@@ -476,7 +476,7 @@ const ComplaintForm: React.FC = () => {
                       {categories.find(c => c.value === formData.category)?.label}
                     </Typography>
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid xs={12}>
                     <Typography variant="subtitle2">Description:</Typography>
                     <Typography variant="body1">{formData.description}</Typography>
                   </Grid>
@@ -490,16 +490,16 @@ const ComplaintForm: React.FC = () => {
                       {formData.location.village}, {formData.location.mandal}
                     </Typography>
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid xs={12}>
                     <Typography variant="subtitle2">Address:</Typography>
                     <Typography variant="body1">{formData.location.address}</Typography>
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid xs={12}>
                     <Typography variant="subtitle2">Evidence Files:</Typography>
                     <Typography variant="body1">{formData.files.length} files uploaded</Typography>
                   </Grid>
                   {formData.isAnonymous && (
-                    <Grid item xs={12}>
+                    <Grid xs={12}>
                       <Typography variant="subtitle2" color="primary">
                         This complaint will be filed anonymously
                       </Typography>
