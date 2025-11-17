@@ -44,7 +44,7 @@ export class NotificationService {
 
       if (sendgridApiKey) {
         // Use SendGrid
-        this.emailTransporter = nodemailer.createTransporter({
+        this.emailTransporter = nodemailer.createTransport({
           host: 'smtp.sendgrid.net',
           port: 587,
           secure: false,
@@ -55,7 +55,7 @@ export class NotificationService {
         });
       } else {
         // Fallback to Gmail or other SMTP
-        this.emailTransporter = nodemailer.createTransporter({
+        this.emailTransporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
             user: process.env.EMAIL_USER,
