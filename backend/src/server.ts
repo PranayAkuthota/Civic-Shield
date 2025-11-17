@@ -17,6 +17,8 @@ import {
 
 // Import routes
 import authRoutes from './routes/auth';
+import complaintRoutes from './routes/complaints';
+import uploadRoutes from './routes/upload';
 
 // Load environment variables
 dotenv.config();
