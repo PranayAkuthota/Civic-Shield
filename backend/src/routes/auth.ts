@@ -85,8 +85,8 @@ const generateTokens = (user: any): { accessToken: string; refreshToken: string 
     department: user.department
   };
 
-  const accessToken = jwt.sign(payload, jwtSecret, { expiresIn: jwtExpire });
-  const refreshToken = jwt.sign(payload, refreshSecret, { expiresIn: refreshExpire });
+  const accessToken = jwt.sign(payload, jwtSecret, { expiresIn: jwtExpire } as SignOptions);
+  const refreshToken = jwt.sign(payload, refreshSecret, { expiresIn: refreshExpire } as SignOptions);
 
   return { accessToken, refreshToken };
 };
