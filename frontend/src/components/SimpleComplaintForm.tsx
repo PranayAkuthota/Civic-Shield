@@ -183,7 +183,7 @@ const SimpleComplaintForm: React.FC = () => {
         severity: formData.severity,
         location: {
           ...formData.location,
-          coordinates: [78.5, 17.4] // Default to Hyderabad coordinates
+          coordinates: [78.5, 17.4] as [number, number] // Default to Hyderabad coordinates
         },
         isAnonymous: formData.isAnonymous
       };
