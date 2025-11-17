@@ -4,7 +4,7 @@ import { User, Complaint } from '../models';
 
 export interface NotificationData {
   userId: string;
-  type: 'email' | 'sms' | 'push' | 'inapp';
+  type: 'email' | 'sms' | 'push' | 'inapp' | 'all';
   subject: string;
   message: string;
   data?: any;
