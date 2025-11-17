@@ -255,32 +255,30 @@ const ComplaintForm: React.FC = () => {
     switch (step) {
       case 0:
         return (
-          <Grid container spacing={3}>
-            <Grid xs={12}>
-              <TextField
-                fullWidth
-                label="Complaint Title"
-                value={formData.title}
-                onChange={(e) => handleInputChange('title', e.target.value)}
-                required
-                multiline
-                rows={2}
-                helperText="Brief title describing the issue (10-200 characters)"
-              />
-            </Grid>
-            <Grid xs={12}>
-              <TextField
-                fullWidth
-                label="Detailed Description"
-                value={formData.description}
-                onChange={(e) => handleInputChange('description', e.target.value)}
-                required
-                multiline
-                rows={6}
-                helperText="Provide detailed information about the encroachment (50-2000 characters)"
-              />
-            </Grid>
-            <Grid xs={12} md={6}>
+          <Box>
+            <TextField
+              fullWidth
+              label="Complaint Title"
+              value={formData.title}
+              onChange={(e) => handleInputChange('title', e.target.value)}
+              required
+              multiline
+              rows={2}
+              helperText="Brief title describing the issue (10-200 characters)"
+              sx={{ mb: 2 }}
+            />
+            <TextField
+              fullWidth
+              label="Detailed Description"
+              value={formData.description}
+              onChange={(e) => handleInputChange('description', e.target.value)}
+              required
+              multiline
+              rows={6}
+              helperText="Provide detailed information about the encroachment (50-2000 characters)"
+              sx={{ mb: 2 }}
+            />
+            <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
               <FormControl fullWidth required>
                 <InputLabel>Category</InputLabel>
                 <Select
@@ -294,8 +292,6 @@ const ComplaintForm: React.FC = () => {
                   ))}
                 </Select>
               </FormControl>
-            </Grid>
-            <Grid xs={12} md={6}>
               <FormControl fullWidth>
                 <InputLabel>Severity Level</InputLabel>
                 <Select
@@ -311,23 +307,21 @@ const ComplaintForm: React.FC = () => {
                   ))}
                 </Select>
               </FormControl>
-            </Grid>
-            <Grid xs={12}>
-              <FormControlLabel
-                control={
-                  <Switch
-                    checked={formData.isAnonymous}
-                    onChange={(e) => handleInputChange('isAnonymous', e.target.checked)}
-                    color="primary"
-                  />
-                }
-                label="File complaint anonymously"
-              />
-              <Typography variant="caption" display="block" color="textSecondary">
-                Your identity will be hidden from public view, but officials can still contact you if needed
-              </Typography>
-            </Grid>
-          </Grid>
+            </Box>
+            <FormControlLabel
+              control={
+                <Switch
+                  checked={formData.isAnonymous}
+                  onChange={(e) => handleInputChange('isAnonymous', e.target.checked)}
+                  color="primary"
+                />
+              }
+              label="File complaint anonymously"
+            />
+            <Typography variant="caption" display="block" color="textSecondary">
+              Your identity will be hidden from public view, but officials can still contact you if needed
+            </Typography>
+          </Box>
         );
 
       case 1:
