@@ -1,6 +1,6 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { body, validationResult } from 'express-validator';
-import jwt from 'jsonwebtoken';
+import jwt, { SignOptions } from 'jsonwebtoken';
 import { User, UserRole } from '../models';
 import { AuthenticatedRequest, ApiResponse, JwtPayload } from '../types';
 import { authenticateToken, validateRefreshToken, authorizeRoles } from '../middleware/auth';
