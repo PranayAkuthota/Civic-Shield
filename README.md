@@ -1,4 +1,4 @@
-# Telangana Assets and Properties Protection Portal
+# Civic-Shield (Telangana Assets and Properties Protection Portal)
 
 A comprehensive full-stack web application for citizens to file complaints against unauthorized land encroachments in Telangana, India.
 
