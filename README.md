@@ -2,6 +2,11 @@
 
 A comprehensive full-stack web application for citizens to file complaints against unauthorized land encroachments in Telangana, India.
 
+## 🌐 Live Deployments
+
+- **Frontend (Vercel):** [https://civic-shield-8l2p.vercel.app](https://civic-shield-8l2p.vercel.app)
+- **Backend API (Render):** [https://civic-shield-vby6.onrender.com](https://civic-shield-vby6.onrender.com)
+
 ## 🚀 Quick Start
 
 ### Prerequisites
