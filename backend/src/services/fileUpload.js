@@ -322,7 +322,7 @@ class S3FileUploadService {
 
 // Export the appropriate service based on environment
 exports.S3FileUploadService = S3FileUploadService;
-const fileUploadService = exports.fileUploadService = process.env.NODE_ENV === 'production' ? new S3FileUploadService() : new FileUploadService();
+const fileUploadService = exports.fileUploadService = (process.env.NODE_ENV === 'production' && process.env.AWS_ACCESS_KEY_ID) ? new S3FileUploadService() : new FileUploadService();
 
 // File upload middleware
 const uploadSingle = exports.uploadSingle = createUploadMiddleware(1).single('file');
