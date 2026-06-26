@@ -1,0 +1,49 @@
+{
+  "name": "telangana-properties-protection-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Civic Shield",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.js"
+  },
+  "keywords": [
+    "telangana",
+    "land",
+    "protection",
+    "complaints",
+    "government",
+    "encroachment"
+  ],
+  "author": "Civic Shield Team",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "aws-sdk": "^2.1692.0",
+    "bcryptjs": "^3.0.3",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.0",
+    "helmet": "^8.1.0",
+    "ioredis": "^5.8.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.4",
+    "morgan": "^1.10.1",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.10",
+    "redis": "^5.9.0"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.14",
+    "supertest": "^7.1.4"
+  }
+}
